@@ -1,0 +1,72 @@
+/* CSS */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 34px;
+    color: #777;
+    background: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* sticky footer styling */
+
+/* https://css-tricks.com/snippets/css/sticky-footer/ */
+/* Sticky Footer with calc()*/
+.wrapper {
+    min-height: calc(100vh - 70px);
+  }
+
+  .footer {
+    height: 50px;
+  }
+/* End Sticky Footer */
+
+/* General Styling */
+.logo {
+    font-family: 'Hi Melody', cursive;
+    border-bottom: 1px solid gray;
+}
+
+.container-header {
+    color: #ffffff;
+    background: #7f462c;
+}
+
+.container-header p {
+    font-weight:bold;
+}
+
+
+/* Connect with me row */
+.connect-row {
+    width:300px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+#github:hover {
+    content:url("../images/github_hover.png");
+  }
+  
+  #stackoverflow:hover {
+    content:url("../images/stackoverflow_hover.png");
+  }
+  
+  #linkedin:hover {
+    content:url("../images/linkedin_hover.png");
+  }
+  
+
+footer {
+    padding: 15px 15px;
+    font-size:12px;
+    color:#ccc;
+    text-align:center;
+    background:#483d8b;
+    height: 50px;
+}

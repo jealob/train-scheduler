@@ -32,22 +32,42 @@ body {
     border-bottom: 1px solid gray;
 }
 
+.nav-bar {
+    position: fixed;
+}
+
 .container-header {
     color: #ffffff;
     background: #7f462c;
 }
 
-.container-header p {
-    font-weight:bold;
+.display-header {
+    color: #ffffff;
+    background:#337ab7;
 }
 
+.bordered { 
+    border-color: #337ab7;
+}
 
+table, .label-name, .add-train, .display-header{
+    font-weight: bold;
+}
+
+.display-header {
+    font-size: large;
+}
+.add-train{
+    border: hidden;
+    color: #ffffff;
+    background:#337ab7;
+}
 /* Connect with me row */
 .connect-row {
     width:300px;
     max-width: 100%;
     margin: 0 auto;
-  }
+}
 
 #github:hover {
     content:url("../images/github_hover.png");

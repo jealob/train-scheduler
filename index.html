@@ -5,40 +5,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GIFsable | Get Your Favorite GIFs</title>
+    <title>Train Scheduler | Choo Choo. Chee Chee.</title>
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link href="https://fonts.googleapis.com/css?family=Hi+Melody" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
     <!-- Nav tag -->
     <!-- Image and text -->
-      <nav aria-label="breadcrumb">
+    <nav aria-label="breadcrumb nav-bar">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="https://jealob.github.io/Bootstrap-Portfolio/index.html">Home</a></li>
-          <li class="breadcrumb-item"><a href="https://jealob.github.io/Bootstrap-Portfolio/portfolio.html">Portfolio</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Train Scheduler</li>
+            <li class="breadcrumb-item">
+                <a href="https://jealob.github.io/Bootstrap-Portfolio/index.html">Home</a>
+            </li>
+            <li class="breadcrumb-item">
+                <a href="https://jealob.github.io/Bootstrap-Portfolio/portfolio.html">Portfolio</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Train Scheduler</li>
         </ol>
-      </nav>
+    </nav>
 
     <!-- Container for content -->
     <div class="container mt-5 mb-2 py-3 wrapper">
         <section>
-         <div class="row">
-             <div class="col">
-                <div class="jumbotron jumbotron-fluid text-center rounded container-header">
-                    <div class="container">
-                      <h1 class="display-4">Anytime is Train Time</h1>
-                      <p class="lead">Choo Choo. Chee Chee.</p>
+            <div class="row">
+                <div class="col">
+                    <div class="jumbotron jumbotron-fluid text-center rounded pt-5 pb-4 container-header">
+                        <div class="container">
+                            <h1 class="display-4">Anytime is Train Time</h1>
+                            <p class="lead">Choo Choo. Chee Chee.</p>
+                        </div>
                     </div>
-                  </div>
-             </div>
-         </div>
+                </div>
+            </div>
 
+            <div class="card mb-4 bordered">
+                <div class="card-header  py-1 display-header">
+                    Current Train Schedule
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Train Name</th>
+                            <th scope="col">Destination</th>
+                            <th scope="col">Frequency (min)</th>
+                            <th scope="col">Next Arrival</th>
+                            <th scope="col">Mintues Away</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- The train schedule will be populated in this section-->
+                    </tbody>
+                </table>
+            </div>
+            <div id="accordion">
+                <div class="card mb-4 bordered">
+                    <div class="card-header py-1 display-header" id="headingOne">
+                        <button class="btn btn-primary px-0 py-0 display-header add-train" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                            aria-controls="collapseOne">
+                            Add Train
+                        </button>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <!-- <div class="card "> -->
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="train-name" class="label-name">Train Name</label>
+                                    <input type="text" class="form-control" id="train-name" placeholder="Enter Train name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="train-destination" class="label-name">Destination</label>
+                                    <input type="text" class="form-control" id="train-destination" placeholder="Enter Destination" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="train-time" class="label-name">First Train Time (HH:mm - military time)</label>
+                                    <input type="time" class="form-control" id="train-time" placeholder="Enter Train Time" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="train-frequency" class="label-name">Frequency (min)</label>
+                                    <input type="number" class="form-control" id="train-frequency" placeholder="Enter Frequency in Mintues" required>
+                                </div>
+                                <button type="submit" class="btn btn-sm btn-primary my-1 display-header">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </div>
         </section>
     </div>
     <div class="row px-3 text-center connect-row ">
@@ -65,7 +124,7 @@
     </footer>
     <!-- End of footer -->
     <!-- Link to Core Bootstrap JS CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
         crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"

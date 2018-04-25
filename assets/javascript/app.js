@@ -7,5 +7,13 @@
 // Document Ready
 $(document).ready(function () {
     // Declare global variables
+// Show and Hide Train toggle button display control
+    $('#add-train').click(function () {
+        if ($(this).text() === "Add Train") {
+            $(this).text("Hide Add Train");
+        } else {
+            $(this).text("Add Train");
+        }
+    });
    
 })

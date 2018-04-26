@@ -47,7 +47,7 @@ $(document).ready(function () {
             // minutesAway: minutesAway,
             // nextArrival: nextArrival,
         }
-        console.log(trainItinerary);
+        
         // Push data to database
         database.ref().push(trainItinerary);
         alert("Employee successfully added");
@@ -62,19 +62,14 @@ $(document).ready(function () {
         // debugger;
         let data = childSnapshot.val();
 
-        console.log(data.firstTime);
         //  Calculate required parameters 
         let timeDiff = moment().diff(moment(data.firstTime, "X"), "minutes");
-        console.log("time different", timeDiff);
-        console.log("frequ", data.frequency);
         let minutesAway = data.frequency - (timeDiff % data.frequency);
-        console.log("minutes away", minutesAway);
         let nextArrival = moment().add(minutesAway, "minutes");
         nextArrival = moment(nextArrival).format("hh:mm");
-        console.log("next arrival", nextArrival);
 
         // Add train Itinerary to table
-        $(".table > tbody").append("<tr><td>" + data.name + "</td><td>" + data.destination + "</td><td>" + data.frequency + "</td><td>" + nextArrival + "</td><td>" + minutesAway + "</td></tr>");
+        $(".table > tbody").append("<tr><td>" + data.name + "</td><td>" + data.destination + "</td><td>" + data.frequency + "</td><td>" + nextArrival + "</td><td>" + ((minutesAway < 2) ? "due" : minutesAway) + "</td></tr>");
 
     }, function (errorObject) {
         console.log("Errors handled: " + errorObject.code);

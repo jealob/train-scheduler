@@ -46,8 +46,8 @@
                 <div class="card-header  py-1 display-header">
                     Current Train Schedule
                 </div>
-                <table class="table">
-                    <thead>
+                <table class="text-center table">
+                    <thead class="table-header">
                         <tr>
                             <th scope="col">Train Name</th>
                             <th scope="col">Destination</th>
@@ -70,7 +70,6 @@
                         </button>
                     </div>
                     <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-                        <!-- <div class="card "> -->
                         <div class="card-body">
                             <form>
                                 <div class="form-group">
@@ -82,8 +81,8 @@
                                     <input type="text" class="form-control" id="destination" placeholder="Enter Destination" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="time" class="label-name">First Train Time (HH:mm - military time)</label>
-                                    <input type="text"  class="form-control" id="time" placeholder="Enter Train Time"  required>
+                                    <label for="time" class="label-name">First Train Time (HHmm - military time)</label>
+                                    <input type="text"  class="form-control" id="time" placeholder="Enter Train Time '0000'"  required>
                                 </div>
                                 <div class="form-group">
                                     <label for="frequency" class="label-name">Frequency (min)</label>
@@ -93,7 +92,6 @@
                             </form>
                         </div>
                     </div>
-                    <!-- </div> -->
                 </div>
             </div>
         </section>

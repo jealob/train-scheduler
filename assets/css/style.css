@@ -50,7 +50,7 @@ body {
     border-color: #337ab7;
 }
 
-table, .label-name, .add-train, .display-header{
+.table-header, .label-name, .add-train, .display-header{
     font-weight: bold;
 }
 
@@ -59,6 +59,7 @@ table, .label-name, .add-train, .display-header{
     color: #ffffff;
     background:#337ab7;
 }
+
 /* Connect with me row */
 .connect-row {
     width:300px;

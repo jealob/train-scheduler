@@ -9,14 +9,13 @@
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
     <!-- Nav tag -->
     <!-- Image and text -->
-    <nav aria-label="breadcrumb nav-bar">
+    <nav aria-label="breadcrumb" class="nav-bar">
         <ol class="breadcrumb">
             <li class="breadcrumb-item">
                 <a href="https://jealob.github.io/Bootstrap-Portfolio/index.html">Home</a>
@@ -74,21 +73,42 @@
                             <form>
                                 <div class="form-group">
                                     <label for="train-name" class="label-name">Train Name</label>
-                                    <input type="text" class="form-control" id="train-name" placeholder="Enter Train name" required>
+                                    <input type="text" class="form-control" id="train-name" placeholder="Enter Train name">
                                 </div>
                                 <div class="form-group">
                                     <label for="train-destination" class="label-name">Destination</label>
-                                    <input type="text" class="form-control" id="destination" placeholder="Enter Destination" required>
+                                    <input type="text" class="form-control" id="destination" placeholder="Enter Destination">
                                 </div>
                                 <div class="form-group">
                                     <label for="time" class="label-name">First Train Time (HHmm - military time)</label>
-                                    <input type="text"  class="form-control" id="time" placeholder="Enter Train Time '0000'"  required>
+                                    <input type="text" class="form-control" id="time" placeholder="Enter Train Time '0000'">
                                 </div>
                                 <div class="form-group">
                                     <label for="frequency" class="label-name">Frequency (min)</label>
-                                    <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency in Minutes" required>
+                                    <input type="number" class="form-control" id="frequency" placeholder="Enter Frequency in Minutes">
                                 </div>
-                                <button type="submit" class="btn btn-sm btn-primary my-1 display-header" id="submit">Submit</button>
+                                <button type="submit" class="btn btn-sm btn-primary my-1 display-header" data-toggle="modal" data-target="#myModal" id="submit">Submit</button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="myModalLabel">Warning</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                To add a new train all fields must be filled!
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End modal -->
                             </form>
                         </div>
                     </div>

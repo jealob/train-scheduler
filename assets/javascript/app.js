@@ -51,20 +51,22 @@ $(document).ready(function () {
 
             // Push data to database
             database.ref().push(trainItinerary);
-            alert("Employee successfully added");
+            // Change button attribute to call to call success modal
+            $(this).attr("data-target", "#successModal");
+            $('#successModal').on();
             $("#train-name").val("");
             $("#destination").val("");
-            $("#frequency").val("");
             $("#time").val("");
+            $("#frequency").val("");
         }
         else {
-            $('#myModal').on();     
+            $('#warningModal').on();     
         }
     });
 
     // Firebase watcher + initial loader + order/limit HINT: .on("child_added")
     database.ref().on("child_added", function (childSnapshot, prevChildKey) {
-        // debugger;
+  
         let data = childSnapshot.val();
 
         //  Calculate required parameters 

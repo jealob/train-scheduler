@@ -60,6 +60,7 @@ $(document).ready(function () {
             $("#frequency").val("");
         }
         else {
+            $(this).attr("data-target", "#warningModal");
             $('#warningModal').on();     
         }
     });
